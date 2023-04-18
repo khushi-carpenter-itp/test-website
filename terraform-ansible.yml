@@ -14,4 +14,4 @@
       shell: sudo docker build -t khushi3008/ansapp1 ~/test-website/
       
     - name: docker run 
-      shell: sudo docker run -it -d --name ansapp1 -p 3100:80 khushi3008/ansapp1
+      shell:  sudo docker run -it -d --name ansapp1 -p 3100:80 khushi3008/ansapp1
