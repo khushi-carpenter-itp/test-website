@@ -1,17 +1,17 @@
 ---
-- hosts: web123
+- hosts: all
   tasks:
     - name: cleaning files
-      shell: rm -rf ~/test4
+      shell: rm -rf ~/test-website
 
     - name: pull
-      shell: git clone https://github.com/Saumil343/test4.git
+      shell: git clone https://github.com/khushi-carpenter-itp/test-website.git
       
     - name: docker kill
       shell: docker stop ansapp1 || true && docker rm ansapp1 || true
     
     - name: docker build
-      shell: docker build -t saumil343/ansapp1 ~/test4/
+      shell: docker build -t khushi3008/ansapp1 ~/test-website/
       
     - name: docker run 
-      shell: docker run -it -d --name ansapp1 -p 3100:80 saumil343/ansapp1
+      shell: docker run -it -d --name ansapp1 -p 3100:80 khushi3008/ansapp1
