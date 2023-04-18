@@ -8,7 +8,7 @@
       shell: sudo git clone https://github.com/khushi-carpenter-itp/test-website.git
       
     - name: docker kill
-      shell: sudo docker stop ansapp1 || true && docker rm ansapp1 || true
+      shell: sudo docker stop ansapp1 || true && docker rm -f ansapp1 || true
     
     - name: docker build
       shell: sudo docker build -t khushi3008/ansapp1 ~/test-website/
