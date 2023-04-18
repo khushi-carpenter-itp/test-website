@@ -8,10 +8,10 @@
       shell: sudo git clone https://github.com/khushi-carpenter-itp/test-website.git
       
     - name: docker kill
-      shell: sudo docker stop ansapp1 || true && docker rm -f ansapp1 || true
+      shell: sudo docker stop ansapp || true && docker rm -f ansapp || true
     
     - name: docker build
-      shell: sudo docker build -t khushi3008/ansapp1 ~/test-website/
+      shell: sudo docker build -t khushi3008/ansapp ~/test-website/
       
     - name: docker run 
-      shell:  sudo docker run -it -d --name ansapp1 -p 3100:80 khushi3008/ansapp1
+      shell:  sudo docker run -it -d --name ansapp1 -p 3100:80 khushi3008/ansapp
